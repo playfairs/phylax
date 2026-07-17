@@ -1,0 +1,31 @@
+                             Phylax 🛡️
+
+      A Cross-Platform Host Security Platform written in Rust.
+
+  1. What is Phylax?
+
+     Phylax is a host security platform designed to monitor system
+     activity, detect suspicious behavior, log security events, and
+     respond to threats when necessary.
+
+     The goal is to provide a lightweight, extensible foundation for
+     modern host security while remaining transparent, privacy-focused,
+     and cross-platform.
+
+  2. Planned Features.
+
+     - Event Monitoring
+     - Security Logging (Email, Notifications, Logfiles, etc)
+     - Threat Detection (Essentially the Search in "Search and Destroy")
+     - Automated Response (Essentially the Destroy in "Search and Destroy")
+     - Incident Collection
+     - Extensible Rule Engine
+     - Cross-Platform Support (Windows, BSD, Linux, macOS)
+
+  3. Status.
+
+     Phylax is currently under active development and should be
+     considered experimental. Interfaces, configuration formats, and
+     internal components may change between releases.
+
+  Written in Rust with love by Playfairs
