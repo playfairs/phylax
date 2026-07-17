@@ -1,0 +1,19 @@
+[package]
+name = "phylax-responders"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+phylax-common = { path = "../phylax-common" }
+phylax-engine = { path = "../phylax-engine" }
+phylax-platform = { path = "../phylax-platform" }
+serde = { version = "1.0", features = ["derive"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+
+[target.'cfg(unix)'.dependencies]
+nix = "0.27"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.52", features = ["Win32_System_Threading"] }

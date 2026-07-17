@@ -1,0 +1,12 @@
+name = "Privilege Escalation Attempt"
+event = "privilege_escalation"
+enabled = true
+severity = "critical"
+
+[[actions]]
+action_type = "alert"
+parameters = { message = "Privilege escalation attempt detected" }
+
+[[actions]]
+action_type = "disable_account"
+parameters = { username = "{source.user}" }

@@ -1,0 +1,29 @@
+[package]
+name = "phylaxd"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "phylaxd"
+path = "src/main.rs"
+
+[dependencies]
+phylax-common = { path = "../phylax-common" }
+phylax-events = { path = "../phylax-events" }
+phylax-storage = { path = "../phylax-storage" }
+phylax-rules = { path = "../phylax-rules" }
+phylax-engine = { path = "../phylax-engine" }
+phylax-policy = { path = "../phylax-policy" }
+phylax-logging = { path = "../phylax-logging" }
+phylax-alerts = { path = "../phylax-alerts" }
+phylax-collectors = { path = "../phylax-collectors" }
+phylax-responders = { path = "../phylax-responders" }
+phylax-platform = { path = "../phylax-platform" }
+serde = { version = "1.0", features = ["derive"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1.0", features = ["full"] }
+crossbeam-channel = "0.5"
+clap = { version = "4.0", features = ["derive"] }
+signal-hook = "0.3"
+signal-hook-tokio = { version = "0.3", features = ["futures-v0_3"] }

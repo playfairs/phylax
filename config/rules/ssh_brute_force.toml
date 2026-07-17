@@ -1,0 +1,17 @@
+name = "SSH Brute Force Detection"
+event = "ssh_login"
+enabled = true
+severity = "high"
+
+[[conditions]]
+field = "failed_attempts"
+operator = ">"
+value = "5"
+
+[[actions]]
+action_type = "alert"
+parameters = { message = "Multiple SSH login failures detected" }
+
+[[actions]]
+action_type = "block_ip"
+parameters = { ip_address = "{source.ip_address}" }

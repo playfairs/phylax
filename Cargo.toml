@@ -1,0 +1,44 @@
+[workspace]
+members = [
+    "crates/phylax-common",
+    "crates/phylax-events",
+    "crates/phylax-storage",
+    "crates/phylax-rules",
+    "crates/phylax-engine",
+    "crates/phylax-policy",
+    "crates/phylax-logging",
+    "crates/phylax-alerts",
+    "crates/phylax-platform",
+    "crates/phylax-collectors",
+    "crates/phylax-responders",
+    "crates/phylaxd",
+    "crates/phylaxctl",
+    "xtask",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Phylax Security"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/phylax-security/phylax"
+
+[workspace.dependencies]
+phylax-common = { path = "crates/phylax-common" }
+phylax-events = { path = "crates/phylax-events" }
+phylax-storage = { path = "crates/phylax-storage" }
+phylax-rules = { path = "crates/phylax-rules" }
+phylax-engine = { path = "crates/phylax-engine" }
+phylax-policy = { path = "crates/phylax-policy" }
+phylax-logging = { path = "crates/phylax-logging" }
+phylax-alerts = { path = "crates/phylax-alerts" }
+phylax-platform = { path = "crates/phylax-platform" }
+phylax-collectors = { path = "crates/phylax-collectors" }
+phylax-responders = { path = "crates/phylax-responders" }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

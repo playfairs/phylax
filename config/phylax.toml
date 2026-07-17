@@ -1,0 +1,42 @@
+[daemon]
+max_events_per_second = 1000
+worker_threads = 4
+
+[logging]
+level = "info"
+format = "json"
+max_size_mb = 100
+max_files = 10
+
+[storage]
+database_path = "/var/lib/phylax/phylax.db"
+retention_days = 30
+
+[collectors]
+ssh = { enabled = true, log_paths = ["/var/log/auth.log", "/var/log/secure"] }
+process = { enabled = true, scan_interval_seconds = 5 }
+filesystem = { enabled = true, watch_paths = ["/etc", "/home"] }
+
+[responders]
+require_approval = true
+ip_blocking = { enabled = false, firewall_command = "iptables -A INPUT -s {IP} -j DROP" }
+process_termination = { enabled = false, allow_termination = false }
+file_quarantine = { enabled = true, quarantine_path = "/var/lib/phylax/quarantine" }
+
+# Need to probably fix this, will prefer to use .phylax/config.toml or .phylax/config/email.toml
+[alerts]
+enabled = ["email"]
+email = { 
+    smtp_server = "smtp.gmail.com",
+    smtp_port = 587,
+    username = "your-email@gmail.com",
+    password = "your-app-password",
+    from_address = "phylax@yourdomain.com",
+    to_addresses = ["admin@yourdomain.com"],
+    use_tls = true
+}
+webhook = null # Also "Even Better Toml" is complaining about these newlines.
+
+[policy]
+require_approval_for_high_threat = true
+auto_respond_critical = false

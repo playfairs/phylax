@@ -1,0 +1,16 @@
+[package]
+name = "phylax-collectors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+phylax-common = { path = "../phylax-common" }
+phylax-events = { path = "../phylax-events" }
+phylax-platform = { path = "../phylax-platform" }
+serde = { version = "1.0", features = ["derive"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+tokio = { version = "1.0", features = ["full"] }
+crossbeam-channel = "0.5"
+notify = "6.0"
+regex = "1.0"

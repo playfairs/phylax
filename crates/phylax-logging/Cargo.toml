@@ -1,0 +1,15 @@
+[package]
+name = "phylax-logging"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+phylax-common = { path = "../phylax-common" }
+phylax-events = { path = "../phylax-events" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
+tracing-appender = "0.2"
+thiserror = "1.0"
