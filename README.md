@@ -1,6 +1,6 @@
-                             (Phylax)[https://en.wiktionary.org/wiki/phylax] 🛡️
+# (Phylax)[https://en.wiktionary.org/wiki/phylax] 🛡️
 
-      A Cross-Platform Host Security Platform written in Rust.
+A Cross-Platform Host Security Platform written in Rust.
 
   1. What is Phylax?
 
