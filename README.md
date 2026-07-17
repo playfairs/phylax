@@ -1,4 +1,4 @@
-# (Phylax)[https://en.wiktionary.org/wiki/phylax] 🛡️
+# [Phylax](https://en.wiktionary.org/wiki/phylax) 🛡️
 
 A Cross-Platform Host Security Platform written in Rust.
 
@@ -32,4 +32,4 @@ A Cross-Platform Host Security Platform written in Rust.
 
 ---
 
-From (Ancient Greek)[https://en.wikipedia.org/wiki/Ancient_Greek] (φύλαξ)[https://en.wiktionary.org/wiki/%CF%86%CF%8D%CE%BB%CE%B1%CE%BE#Ancient_Greek] (phúlax, “watcher, guard, sentinel, guardian, keeper, protector”). 
+From [Ancient Greek](https://en.wikipedia.org/wiki/Ancient_Greek) [φύλαξ](https://en.wiktionary.org/wiki/%CF%86%CF%8D%CE%BB%CE%B1%CE%BE#Ancient_Greek) (phúlax, “watcher, guard, sentinel, guardian, keeper, protector”). 
